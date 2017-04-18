@@ -32,18 +32,23 @@
     "@angular/platform-browser": "~4.0.0",
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
-
+    "@ngui/auto-complete": "^0.13.2",
     "angular-in-memory-web-api": "~0.3.0",
-    "systemjs": "0.19.40",
+    "angular2-google-maps": "^0.17.0",
+    "angular2-kpx-autocomplete": "0.0.7",
     "core-js": "^2.4.1",
+    "ng2-auto-complete": "^0.12.0",
+    "ng2-pagination": "^2.0.1",
+    "ng2-validation": "^4.1.0",
+    "primeng": "^4.0.0-rc.3",
     "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
     "lite-server": "^2.2.2",
     "typescript": "~2.1.0",
-
     "canonical-path": "0.0.2",
     "tslint": "^3.15.1",
     "lodash": "^4.16.4",
@@ -55,7 +60,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~4.0.14",
     "rimraf": "^2.5.4",
-
     "@types/node": "^6.0.46",
     "@types/jasmine": "2.5.36"
   },
