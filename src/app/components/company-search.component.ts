@@ -27,7 +27,6 @@ import {CompanyComponent} from './company.component';
 export class CompanySearchComponent implements OnInit  {
     searched: boolean;
     companies: Observable<Company[]>;
-    isNull: boolean;
     private searchTerms = new Subject<string>();
     constructor(private companySearchService: CompanySearchService, private companyService: CompanyService)
     {
@@ -55,27 +54,5 @@ export class CompanySearchComponent implements OnInit  {
       });
 
     }
-    validateSearchBox(term: string) //testing to see if search box is empty
-    {
-      
-      if( term == "")
-      {
-          this.isNull = true;
-          document.getElementById("searchBox").style.borderColor = "#d50000";
-          //this.companies = Observable.of<Company[]>([]);
-          this.search(term);
-          //console.log(this.isNull);
-          
-      }
-      else
-      {
-          this.isNull = false;
-          document.getElementById("searchBox").style.borderColor = "";
-          this.search(term);
-          //console.log(this.isNull);
-      }
-    }
-    
-
  }
  

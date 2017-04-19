@@ -7,7 +7,7 @@ import { Router, NavigationEnd } from '@angular/router';
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="/">Search A Com</a>
+      <a class="navbar-brand" routerLink="/">Search A Service</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a routerLink="/">Home</a></li>

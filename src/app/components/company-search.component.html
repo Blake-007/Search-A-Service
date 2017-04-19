@@ -1,20 +1,16 @@
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h1>Search a Comp</h1>
+  <h1>Search a Service</h1>
   <img src="./C.jpg" alt="C" style="width:200px;height:128px;" class="img-circle">
 </div>
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
     
-    <form (submit)= "validateSearchBox(term.value)"  >
+    <form (submit)= "search(term.value)"  >
         <div class="[ input-group ]" >
          <input type="text" id = "searchBox" #term class="[ form-control ]" placeholder="Search for services and hit enter"  required/>       
-         <!--Tests to see if isNull is true, isNull is used to test if search box is empty -->     
-            <div *ngIf = "isNull" class = "errorMsg">
-                Please search for a service
-            </div>  
             <span class="[ input-group-btn ]">
-                <button class="[ btn btn-default ]" type="submit" (click)= "validateSearchBox(term.value)"><span class="[ glyphicon glyphicon-search ]"></span></button>  
+                <button class="[ btn btn-default ]" type="submit" (click)= "search(term.value)"><span class="[ glyphicon glyphicon-search ]"></span></button>  
             </span> 
          <span class="[ input-group-btn ]">
                 <button class="[ btn btn-danger ]" type="reset"><span class="[ glyphicon glyphicon-remove ]"></span></button>
@@ -32,8 +28,8 @@
             {{company.name}}
         </li>
     </ul> 
-    <!-- Testing to see if companies is empty or whether search text box has text then displaying message if true -->
-    <div *ngIf = "(companies | async)?.length == 0 || isNull">No Results Found</div>
+    <!-- Testing to see if companies is empty -->
+    <div *ngIf = "(companies | async)?.length == 0">No Results Found</div>
    <!-- Pagination Controls -->
     <pagination-controls (pageChange)="page = $event" id="1"
         maxSize="5"
@@ -43,5 +39,5 @@
 </div>
 <!-- Footer Container -->
 <footer class="container-fluid bg-4 text-center">
-  <p>BMG Tech</p>
+   <p>2017 &copy; Developed by BMG Development &reg;</p>
 </footer>

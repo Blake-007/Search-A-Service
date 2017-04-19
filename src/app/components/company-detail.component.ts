@@ -23,7 +23,7 @@ export class CompanyDetailComponent implements OnInit
     }
     ngOnInit():void {
     this.route.params
-      .switchMap((params: Params) => this.companyService.getCompany(+params['id']))
+      .switchMap((params: Params) => this.companyService.getCompany(+params['id']))//retrieving company info based on ID passed via ActivatedRoute from search component
       .subscribe(company => this.company = company);
     }
    

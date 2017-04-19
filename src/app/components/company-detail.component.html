@@ -1,4 +1,3 @@
-<title>About{{company?.name}}</title>
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   <h1>{{company?.name}} details</h1>
@@ -24,11 +23,12 @@
   </div>
 </div>
 <div  class="container-fluid bg-4 text-center">
-    <sebm-google-map [latitude]="company?.lat" [longitude]="company?.long">
+  <!--Adds Google maps to page using sebm-google-map package -->
+    <sebm-google-map [latitude]="company?.lat" [longitude]="company?.long" [zoom] = 17>
       <sebm-google-map-marker [latitude]="company?.lat" [longitude]="company?.long"></sebm-google-map-marker>
     </sebm-google-map>
 </div>
 <!-- Footer Container -->
 <footer class="container-fluid bg-5 text-center">
-  <p>BMG Tech</p>
+  <p>2017 &copy; Developed by BMG Development &reg;</p>
 </footer>
